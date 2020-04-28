@@ -1,0 +1,456 @@
+.disguise1{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: black;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  filter:blur(5px);
+}
+.disguise2{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: black;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  filter:blur(5px);
+}
+body{
+  position: relative;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+header{
+ background: linear-gradient(0deg, #006400 ,#66CD00);
+ margin-right: 40px;
+}
+header .menu a{
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bolder;
+  color : white;
+  display: block;
+  padding: 20px 30px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .menu a span{
+  margin-right: 30px;
+}
+header .menu a i{
+  font-size: 30px;
+  visibility: hidden;
+}
+header .menu a:before{
+  content : "";
+  position: absolute;
+  padding: 20px 2px;
+  top: 15px;
+  left: 20px;
+  background-color: white;
+}
+header .menu a:last-child::before{
+  content : "";
+  position: absolute;
+  padding: 30px 2px;
+  left: 20px;
+  background-color: white;
+}
+header .menu a:hover:before{
+  content : "";
+  position: absolute;
+  padding: 20px 120px!important;
+  top: 15px;
+  left: 20px;
+  background-color: white;
+  transition: 0.5s;
+}
+header .menu a:last-child:hover:before{
+  content : "";
+  position: absolute;
+  padding: 30px 120px!important;
+  top: 15px;
+  left: 20px;
+  background-color: white;
+  transition: 0.5s;
+}
+header .menu a:hover span {
+  text-shadow: 2px 2px 1px #006400;
+  z-index: 2;
+  color: #66CD00;
+}
+header .menu a:hover i{
+  color: #66CD00;
+  transition: 1s;
+  visibility: visible;
+  z-index: 2;
+  animation: shadow 1s infinite;
+}
+@keyframes shadow {
+    from {text-shadow: 0px 0px 3px #006400;}
+    to {text-shadow: 0px 0px 3px #66CD00;}
+}
+main h1{
+  margin-top: 10px;
+  font-size: 40px;
+}
+main #présentation h3{
+  font-size: 25px;
+  color: #D2691E;
+}
+main #présentation p{
+  width: 50%;
+  line-height: 30px;
+  background-color: #D2691E;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+main #présentation .images{
+  margin-top: 40px;
+  display: flex;
+}
+main #présentation .images img{
+  width: 100%;
+  height: 300px;
+  margin-top: 20px;
+}
+main #présentation .images .image{
+  width: 20%;
+  display: flex;
+  margin-right: 30px;
+  flex-direction: column;
+  align-items: center;
+}
+main #présentation .images .image:nth-child(3){
+  width: 20%;
+  display: flex;
+  margin-top: 27px;
+  margin-right: 30px;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+main #présentation .images .image #progress{
+  width: 60%;
+  height: 30px;
+  position: relative;
+  background-color: #ddd;
+}
+main #présentation .images .image #mymeter1 , main #présentation .images .image #mymeter2{
+  background-color: #4CAF50;
+  width: 0%;
+  height: 30px;
+  display: block;
+}
+main #présentation .images .image:nth-child(3) img:nth-child(1){
+  width : 8%;
+  height: 30px;
+  margin-top: 0;
+  position: absolute;
+  top: -25px;
+}
+#compétence .tech {
+  background-color: #D2691E;
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+  width: 40%;
+  margin-top: 40px;
+}
+#compétence .tech h3{
+  font-size: 25px;
+}
+#compétence .tech a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+#compétence .tech i{
+  animation: slidDown 1s infinite;
+  margin-top: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+#compétence .tech div{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#compétence .tech p{
+  width : 90%;
+}
+#compétence .tech .sql i , #compétence .tech .php i{
+  margin-left: 40px;
+}
+#compétence .tech .js i{
+  margin-right: 20px;
+}
+#compétence .tech .html i{
+  margin-right: 7px;
+}
+#compétence .tech p{
+  display: none;
+  color: #D2691E;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+@keyframes slidDown {
+  from {text-shadow: 0px 0px 3px #D2691E;}
+  to {text-shadow: 0px 0px 3px white;}
+}
+#compétence .langue{
+  background-color: white;
+  color : #D2691E;
+  padding: 20px;
+}
+#compétence .langue h3{
+  font-size: 25px;
+}
+#compétence .langue div{
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  margin-top: 10px;
+}
+#compétence .formation{
+  background-color: #D2691E;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+  width: 40%;
+}
+#compétence .formation h3{
+  font-size: 25px;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+#compétence .formation > div{
+  display: flex;
+  flex-direction: column;
+}
+#compétence .formation div span{
+  margin-top: 20px;
+  margin-right: 20px;
+}
+#compétence .formation div  strong{
+  margin-top: 20px;
+}
+#compétence .formation div p{
+  color: #D2691E;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  display: none;
+}
+#compétence .formation div i{
+  animation: slidDown 1s infinite;
+  font-size: 20px;
+  cursor: pointer;
+}
+#profil{
+  background: linear-gradient(0deg, #006400 ,#66CD00);
+  padding: 10px 20px 20px 20px;
+  border-radius: 10px;
+  width: 40%;
+  margin-top: 40px;
+  color: white;
+}
+#profil h3{
+  font-size: 25px;
+}
+#profil div{
+  margin-top: 30px!important;
+  display: flex;
+}
+#profil div strong{
+  font-size: 18px;
+  margin-right: 30px;
+}
+#profil div span{
+  font-size: 18px;
+}
+#portfolio{
+  margin-top: 30px;
+  width: 50%;
+  display: flex;
+}
+#portfolio div{
+  width: 34%;
+  margin-left: 10px;
+  overflow: hidden;
+}
+#portfolio img{
+  width : 100%;
+  height: 100%;
+  z-index: -1;
+}
+#portfolio img:hover{
+  opacity: 0.5;
+  transform: scale(1.25);
+  transition: 1s;
+}
+#portfolio a{
+  width : 100%;
+  height: 100%;
+  display: block;
+  background-color: black;
+}
+#contactez-moi{
+  padding: 10px 20px 20px 20px;
+  border-radius: 10px;
+  width: 40%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+#contactez-moi .numTelephon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #D2691E;
+  border-radius: 5px;
+  width: 44%;
+  padding: 10px;
+}
+#contactez-moi .numTelephon img{
+  width: 25%;
+  margin-bottom: 10px;
+  animation: rotate 1s infinite alternate ease-in-out;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(10deg);
+    transition: 1s;
+  }
+  100%{
+    transform: rotate(-10deg);
+    transition: 1s;
+  }
+}
+#contactez-moi .email{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(0deg, #006400 ,#66CD00);
+  border-radius: 5px;
+  width: 44%;
+  padding: 10px;
+  color: white;
+  position: relative;
+}
+#contactez-moi .email .mail1{
+  padding: 20px 35px;
+  border-radius: 3px;
+  background-color: white;
+  margin-top: 30px;
+}
+#contactez-moi .email h3{
+  position: absolute;
+  visibility: hidden;
+  color: black;
+  margin: 0;
+}
+#contactez-moi .email .triangle{
+  width: 0;
+  height: 0;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-top: 25px solid lightgrey;
+  position: absolute;
+  top: 40px;
+}
+#contactez-moi .email:hover .triangle{
+  border-bottom: 25px solid lightgrey;
+  border-top: 0;
+  transition: 1s;
+  top : 15px;
+}
+#contactez-moi .email:hover h3{
+  animation: bonjour 1s 2 alternate ;
+  visibility: visible;
+}
+@keyframes bonjour {
+  0% {
+    font-size: 9px;
+    top: 10px;
+    right: 100px;
+  }
+  10%{
+    font-size: 15px;
+    top: -30px;
+    right: -10px;
+  }
+  20%{
+    font-size: 20px;
+    top: -60px;
+    right: -40px;
+  }
+  30%{
+    font-size: 25px;
+    top: -80px;
+    right: -80px;
+  }
+  40%{
+    font-size: 30px;
+    top: -100px;
+    right: -110px;
+  }
+  50%{
+    font-size: 35px;
+    top: -130px;
+    right: -150px;
+  }
+  60%{
+    font-size: 40px;
+    top: -150px;
+    right: -180px;
+  }
+  70%{
+    font-size: 45px;
+    top: -180px;
+    right: -200px;
+  }
+  80%{
+    font-size: 55px;
+    top: -210px;
+    right: -240px;
+  }
+  90%{
+    font-size: 65px;
+    top: -240px;
+    right: -270px;
+  }
+  100%{
+    font-size: 70px;
+    top: -260px;
+    right: -300px;
+  }
+}
+#MyLife{
+  background: linear-gradient(0deg, #006400 ,#66CD00);
+  padding: 10px 20px 20px 20px;
+  border-radius: 10px;
+  width: 50%;
+  margin-top: 40px;
+  color: white;
+}
+#MyLife h4{
+  font-size: 30px;
+  color: #006400;
+  text-shadow: 1px 1px 1px black;
+}
+#MyLife{
+  font-size: 20px;
+  line-height: 29px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #66CD00;
+}
